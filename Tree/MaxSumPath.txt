@@ -1,0 +1,58 @@
+124. Binary Tree Maximum Path Sum
+Hard
+15.1K
+665
+Companies
+A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
+
+The path sum of a path is the sum of the node's values in the path.
+
+Given the root of a binary tree, return the maximum path sum of any non-empty path.
+
+ 
+
+Example 1:
+
+
+Input: root = [1,2,3]
+Output: 6
+Explanation: The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6.
+Example 2:
+
+
+Input: root = [-10,9,20,null,null,15,7]
+Output: 42
+Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
+ 
+
+Constraints:
+
+The number of nodes in the tree is in the range [1, 3 * 104].
+-1000 <= Node.val <= 1000
+Accepted
+1M
+Submissions
+2.6M
+Acceptance Rate
+39.4%
+Seen this question in a real interview before?
+1/4
+Yes
+No
+Discussion (91)
+Similar Questions
+Related Topics
+Copyright ©️ 2023 LeetCode All rights reserved
+
+
+
+
+Solution imp points
+
+update result -> max from root.val , root.val + left, root.val + right, root.val + left + right, left, right
+
+but while passing the value to the next step only pass root.val + left, root.val + right, left, right, root.val 
+
+as  root.val + left + right cannot be passed as a path to add to a path it will have two paths in a path 
+
+and can not pass just left or right as if root is not considered that won't be a continuous path
